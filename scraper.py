@@ -49,10 +49,10 @@ def scrape_shop(shop):
                 continue
 
             href = href.lower()
-            if "vape" in href and href.startswith("http"):
+            if "Suchbegriff hier eingeben" in href and href.startswith("http"):
                 seen_urls.add(href)
 
-        print(f"🔎 {shop['shop_name']}: {len(seen_urls)} Vape-Links gefunden")
+        print(f"{shop['shop_name']}: {len(seen_urls)} Suchbegriff-Links gefunden")
 
         # Produktseiten besuchen (Limit zum Schutz)
         for url in list(seen_urls)[:20]:
@@ -88,3 +88,4 @@ def scrape_shop(shop):
 
     print(f"{shop['shop_name']}: {len(results)} Produkte extrahiert")
     return results
+
