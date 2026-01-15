@@ -4,7 +4,7 @@ from config import SHOPS, GOOGLE_SHEET_NAME
 from datetime import datetime
 import time
 
-print("🚀 Scraper gestartet")
+print("Scraper gestartet")
 
 gc = connect()
 sh = gc.open(GOOGLE_SHEET_NAME)
@@ -86,3 +86,4 @@ if rows_to_append:
 
 if new_items_rows:
     new_items.append_rows(new_items_rows, value_input_option="USER_ENTERED")
+
