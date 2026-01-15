@@ -1,0 +1,2 @@
+# Webscraper
+Ein individueller Webscraper
